@@ -9,7 +9,7 @@ function fractalsierpinski(A,B,C,iter)
 % Ejemplo: A=[0 0] B=[1 1] C=[2 0]
 % iter = número de iteraciones.
 %
-% NOTA: la función se llama así misma recursivamente XD por lo que si
+% NOTA: la función se llama así misma recursivamente (XD) por lo que si
 % iter>10 el programa tarda mucho en dibujar el fractal. Preferiblemente usar iter<8.
 % Es un ejemplo de programa fractal =D
 %
