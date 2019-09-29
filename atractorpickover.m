@@ -1,10 +1,12 @@
 function atractorpickover(x1,y1,h,iter)
 %
+% atractorpickover(x1,y1,h,iter)
+%
 % Dibuja el atractor de Pickover.
 % Variar parámetros x1, y1, h para ver distintas formas.
-% atractorpickover(x1,y1,h,iter)
-% Recomendable un gran número de iteracioines == 1000 ó 10000.
-% EJ: h=-0.02
+%
+% Recomendable un gran número de iteracioines: 1000 - 10000.
+% Ejemplo: h=-0.02
 %
 for i=1:iter
     xn=x1-h.*sin(y1+tan(3.*y1));  % Ecuaciones
