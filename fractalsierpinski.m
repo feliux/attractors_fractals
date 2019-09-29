@@ -47,4 +47,3 @@ if iter>=3  % Para que dibuje triángulos contenidos no solo en el central. (Rep
         fractalsierpinski(nA,nB,nC,iter-1)
     end
 end
-        
