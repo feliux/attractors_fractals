@@ -1,11 +1,17 @@
 function fractalsierpinski(A,B,C,iter)
 %
-% Dibuja el triángulo de Siespinski.
 % fractalsierpinski(A,B,C,iter)
-% A,B,C son los puntos del triángulo; preferiblemente que sea equilátero.
-% EJ: A=[0 0] B=[1 1] C=[2 0]
-% Si iter>10 el programa tarda mucho en dibujar el fractal. Preferiblemente
-% usar iter<8.
+%
+% Dibuja el triángulo de Siespinski.
+%
+% Variables de entrada:
+% A,B,C = puntos del triángulo; preferiblemente que sea equilátero.
+% Ejemplo: A=[0 0] B=[1 1] C=[2 0]
+% iter = número de iteraciones.
+%
+% NOTA: la función se llama así misma recursivamente XD por lo que si
+% iter>10 el programa tarda mucho en dibujar el fractal. Preferiblemente usar iter<8.
+% Es un ejemplo de programa fractal =D
 %
 hold on
 x=[A(1) B(1) C(1) A(1)];  % Vector coordenadas 'x'.
