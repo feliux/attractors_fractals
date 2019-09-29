@@ -1,31 +1,30 @@
 function xn=ecuacionlogistica(niter)
 %
+% Representaci贸n de la ecuaci贸n log铆stica poblacional x(n+1)=C*x(n)*(1-x(n))
+% Uso: xn=logistica(niter)
+% Las diferentes 贸rbitas se producen al cambiar el par谩metro C.
+% Este programa itera la ecuaci贸n log铆stica para 600 valores diferentes de C
+% commprendidos entre 1 y 4.
+% Para cada valor de C se calcula una 贸rbita de 600 valores, de los cuales
+% no se representan los 100 primeros ya que la funci贸n todav铆a no se ha
+% estabilizado.
+% 'niter' -> n煤mero iteraciones para establizar la ecuaci贸n. Tiene que ser
+% mayor que 100.
 %
-%Representaci髇 de la ecuaci髇 log韘tica poblacional x(n+1)=C*x(n)*(1-x(n))
-%Las diferentes 髍bitas se producen al cambiar el par醡etro C.
-%Este programa itera la ecuaci髇 log韘tica para 600 valores diferentes de C
-%commprendidos entre 1 y 4.
-%Para cada valor de C se calcula una 髍bita de 600 valores, de los cuales
-%no se representan los 100 primeros, en los que la funci髇 todav韆 no se ha
-%estabilizado.
-%'niter' -> n鷐ero iteraciones para establizar la ecuaci髇. Tiene que ser
-%mayor que 100.
-%xn=logistica(niter)
-%
-c=1:0.005:4; %Evaluamos todas las ctes ecol骻icas 'c'.
-x=linspace(0.1,1,length(c)); %Creamos vector para el porcentaje de poblaci髇 髉tima 'x'.
-h=niter-100; %Para representar a partir de la iteraci髇 100.
-for i=1:100  %Para las primeras 100 iteraciones.
+c=1:0.005:4; %Evaluamos todas las ctes ecol贸gicas 'c'.
+x=linspace(0.1,1,length(c)); % Creamos vector para el porcentaje de poblaci贸n 贸ptima 'x'.
+h=niter-100; % Para representar a partir de la iteraci贸n 100.
+for i=1:100  % Para las primeras 100 iteraciones.
     yn=c.*x.*(1-x);
     x=yn;
 end
-for j=1:h    %Para el resto de iteraciones.
+for j=1:h    % Para el resto de iteraciones.
     xn=c.*x.*(1-x);
     x=xn;
     hold on
     plot(c,xn,'m.','markersize',1)
 end
-disp('el resultado xn es el valor de la poblaci髇 para la 鷏tima iteraci髇.')
-title('Diagrama de bifurcaci髇 de la ecuaci髇 log韘tica')
-xlabel('Constante ecol骻ica  C')
-ylabel('Porcentaje poblaci髇  X')
+disp('el resultado xn es el valor de la poblaci贸n para la 煤ltima iteraci贸n.')
+title('Diagrama de bifurcaci贸n de la ecuaci贸n log铆stica')
+xlabel('Constante ecol贸gica  C')
+ylabel('Porcentaje poblaci贸n  X')
