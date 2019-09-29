@@ -1,4 +1,5 @@
 function xdt=atractorlorentz(t,x,a,b,c)
+%
 % Implementa las ecuaciones de Lorentz para luego resolverlas con ode45
 % Copiar y pegar en la ventana de comandos:
 % [t,x]=ode45(@atractorlorentz,[t0 tf],[x1 x2 x3])
